@@ -22,6 +22,28 @@ const objeto = [
         }
 
     },
+    {
+        "codProduto": 1234,
+
+        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+
+        "preco": 3500.00,
+
+        "qtdEstoque": 0,
+
+        "disponivel": "nao",
+
+        "emDestaque": "sim",
+
+        "departamento": {
+
+            "idDepto": 987,
+
+            "nomeDepto": "Informatica e acessórios"
+
+        }
+
+    },
 ]
 
 //Quantidade total de produtos em estoque
@@ -88,7 +110,9 @@ function ListProductsWithDisponibility(products, disponibility) {
 
 //testes
 
-//TotalProductsQuantity(objeto);
-//DisponibilityProductsQuantity(objeto, false);
-//ListProducts(objeto);
-//ListProductsWithDisponibility(objeto, true);
+TotalProductsQuantity(objeto);
+DisponibilityProductsQuantity(objeto, false);
+DisponibilityProductsQuantity(objeto, true);
+ListProducts(objeto);
+ListProductsWithDisponibility(objeto, true);
+ListProductsWithDisponibility(objeto, false);
