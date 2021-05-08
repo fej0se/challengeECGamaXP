@@ -24,18 +24,18 @@
 <br>
 
  ##### Estimativa: 3 dias
- ##### Status da Sprint: Pendente
+ ##### Status da Sprint: Done :heavy_check_mark:
 
 
 | Tarefa                                      | Estimativa | Início     | Término    | Status       |
 | ------------------------------------------- | :--------: | :--------- | ---------- | :----------: |
-| Configuração do ambiente de desenvolvimento | 1h         | 08/05/2021 | 08/05/2021  | :red_circle: |
-| Quantidade total de produtos                | 30m        | 09/05/2021 | 09/05/2021                                                               | :red_circle: |
-| Listar todos os produtos                    | 45m        | 09/05/2021 | 09/05/2021                                                               | :red_circle: |
-| Quantidade total de produtos disponíveis    | 25m      | 09/05/2021 | 09/05/2021                                                               | :red_circle: |
-| Listar produtos disponíveis                 | 40m        | 09/05/2021 | 09/05/2021                                                               | :red_circle: |
-| Quantidade total produtos indisponíveis     | 20m       | 10/05/2021 | 10/05/2021                                                               | :red_circle: |
-| Listar produtos indisponíveis               | 20m        | 10/05/2021 | 10/05/2021                                                               | :red_circle: |
+| Configuração do ambiente de desenvolvimento | 1h         | 08/05/2021 | 08/05/2021  | :white_check_mark: |
+| Quantidade total de produtos                | 30m        | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
+| Listar todos os produtos                    | 45m        | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
+| Quantidade total de produtos disponíveis    | 25m      | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
+| Listar produtos disponíveis                 | 40m        | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
+| Quantidade total produtos indisponíveis     | 20m       | 10/05/2021 | 10/05/2021                                                               | :rwhite_check_mark: |
+| Listar produtos indisponíveis               | 20m        | 10/05/2021 | 10/05/2021                                                               | :white_check_mark: |
 
 ---
  <br>
