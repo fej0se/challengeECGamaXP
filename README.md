@@ -34,7 +34,7 @@
 | Listar todos os produtos                    | 45m        | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
 | Quantidade total de produtos disponíveis    | 25m      | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
 | Listar produtos disponíveis                 | 40m        | 09/05/2021 | 09/05/2021                                                               | :white_check_mark: |
-| Quantidade total produtos indisponíveis     | 20m       | 10/05/2021 | 10/05/2021                                                               | :rwhite_check_mark: |
+| Quantidade total produtos indisponíveis     | 20m       | 10/05/2021 | 10/05/2021                                                               | :white_check_mark: |
 | Listar produtos indisponíveis               | 20m        | 10/05/2021 | 10/05/2021                                                               | :white_check_mark: |
 
 ---
