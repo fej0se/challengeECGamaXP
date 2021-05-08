@@ -46,7 +46,7 @@ const objeto = [
     },
 ]
 
-//Quantidade total de produtos em estoque
+//Quantidade total de produtos cadastrados em estoque
 function TotalProductsQuantity(products) {
     let quant = 0;
     for (product of products) {
