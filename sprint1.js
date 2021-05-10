@@ -1,5 +1,5 @@
 //estoque teste
-const objeto = [
+const estoque = [
     {
         "codProduto": 1234,
 
