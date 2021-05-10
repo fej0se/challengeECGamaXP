@@ -51,11 +51,11 @@
 
 | Tarefa                                                   | Estimativa | Início     | Término    | Status       |
 |  ---------- | :--------: | ---------- | ------------------------------------------------------------ | :----------: |
-| Listar produto mais caro do estoque e seu departamento   | 55m       | 10/05/2021 | 10/05/2021 | :red_circle: |
-| Listar produto mais barato do estoque e seu departamento | 30m       | 10/05/2021 | 10/05/2021                                                               | :red_circle: |
-| Quantidade de produtos em destaque                       | 45m       | 10/05/2021 | 10/05/2021                                                               | :red_circle: |
-| Listar produtos em destaque                             | 30m       | 10/05/2021 | 11/05/2021                                                               | :red_circle: |
-| Ticket médio dos produtos em destaque                    | 30m       | 11/05/2021 | 11/05/2021                                                               | :red_circle: |
+| Listar produto mais caro do estoque e seu departamento   | 55m       | 10/05/2021 | 10/05/2021 | :white_check_mark: |
+| Listar produto mais barato do estoque e seu departamento | 30m       | 10/05/2021 | 10/05/2021                                                               | :white_check_mark: |
+| Quantidade de produtos em destaque                       | 45m       | 10/05/2021 | 10/05/2021                                                               | :white_check_mark: |
+| Listar produtos em destaque                             | 30m       | 10/05/2021 | 11/05/2021                                                               | :white_check_mark: |
+| Ticket médio dos produtos em destaque                    | 30m       | 11/05/2021 | 11/05/2021                                                               | :white_check_mark: |
 
 ---
  <br>
