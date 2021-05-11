@@ -11,6 +11,94 @@ const estoque = [
 
         "disponivel": "sim",
 
+        "emDestaque": "nao",
+
+        "departamento": {
+
+            "idDepto": 987,
+
+            "nomeDepto": "Informatica e acessórios"
+
+        }
+
+    },
+    {
+        "codProduto": 1234,
+
+        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+
+        "preco": 4500.00,
+
+        "qtdEstoque": 0,
+
+        "disponivel": "nao",
+
+        "emDestaque": "sim",
+
+        "departamento": {
+
+            "idDepto": 987,
+
+            "nomeDepto": "Informatica e acessórios"
+
+        }
+
+    },
+    {
+        "codProduto": 1234,
+
+        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+
+        "preco": 3500.00,
+
+        "qtdEstoque": 5,
+
+        "disponivel": "sim",
+
+        "emDestaque": "nao",
+
+        "departamento": {
+
+            "idDepto": 987,
+
+            "nomeDepto": "Informatica e acessórios"
+
+        }
+
+    },
+    {
+        "codProduto": 1234,
+
+        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+
+        "preco": 4500.00,
+
+        "qtdEstoque": 0,
+
+        "disponivel": "nao",
+
+        "emDestaque": "nao",
+
+        "departamento": {
+
+            "idDepto": 987,
+
+            "nomeDepto": "Informatica e acessórios"
+
+        }
+
+    },
+    {
+        "codProduto": 1234,
+
+        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+
+        "preco": 35000.00,
+
+        "qtdEstoque": 5,
+
+        "disponivel": "sim",
+
         "emDestaque": "sim",
 
         "departamento": {
@@ -27,7 +115,7 @@ const estoque = [
 
         "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
 
-        "preco": 3500.00,
+        "preco": 1500.00,
 
         "qtdEstoque": 0,
 
@@ -47,29 +135,31 @@ const estoque = [
 ]
 
 //Quantidade total de produtos cadastrados em estoque
-function TotalProductsQuantity(products) {
+function totalProductsQuantity(products) {
     let quant = 0;
     for (product of products) {
         quant++;
     }
-    console.log(`Quantidade de produtos em estoque: ${quant}`);
+    return quant;
 }
-//Listar todos produtos do estoque
-function ListProducts(products) {
-    console.log("Listagem de produtos em estoque:")
+//Retorna todos produtos do estoque apenas com cod, nome, preco e quantidade
+function listProducts(products) {
+    let obj = [];
     for (product of products) {
-        console.log(`Código: ${product.codProduto} | Produto: ${product.descricao} | Quantidade: ${product.qtdEstoque} | Preço: ${product.preco}`);
+        obj.push({Cod: product.codProduto, Nome: product.descricao, Preco: product.preco, Quantidade: product.qtdEstoque});
     }
+    return obj;
 }
 
 //Quantidade de produtos disponiveis (true) ou indisponiveis (false) no estoque
-function DisponibilityProductsQuantity(products, disponibility) {
-    let check
-    let quant = 0
-    if ((disponibility == undefined)) {
-        console.log("O atributo disponibilidade não foi passado. Deve ser true ou false");
+function ProductQuantityWithFilters(products, disponibility) {
+    let check;
+    let quant = 0;
+
+    if ((disponibility != true) && (disponibility != false)) {
         return
     }
+
     disponibility ? check = 'sim' : check = 'nao';
 
     for (product of products) {
@@ -78,41 +168,33 @@ function DisponibilityProductsQuantity(products, disponibility) {
         }
     }
 
-    if (disponibility == true) {
-        console.log(`Quantidade de produtos disponiveis: ${quant}`);
-    } else if (disponibility == false) {
-        console.log(`Quantidade de produtos indisponiveis: ${quant}`);
-    }    
+    return quant;
 }
 
-//Listar produtos disponiveis (true) ou indisponiveis (false) no estoque
-function ListProductsWithDisponibility(products, disponibility) {
+//Retorna produtos disponiveis (true) ou indisponiveis (false) no estoque
+function listProductsWithFilters(products, disponibility) {
     let check
+    let newList = []
 
-    if ((disponibility == undefined)) {
-        console.log("O atributo disponibilidade não foi passado. Deve ser true ou false");
+    if ((disponibility != true) && (disponibility != false)) {
         return
     }
-    if (disponibility == true) {
-        check = "sim"
-        console.log("Listagem de produtos disponiveis:");
-    } else if (disponibility == false) {
-        check = "nao"
-        console.log("Listagem de produtos indisponiveis:");
-    }    
+
+    disponibility ? check = 'sim' : check = 'nao';
 
     for (product of products) {
         if (product.disponivel == check) {
-            console.log(`Código: ${product.codProduto} | Produto: ${product.descricao} | Quantidade: ${product.qtdEstoque} | Preço: ${product.preco}`);
+            newList.push(product)
         }
     }
+    return newList;
 }
 
 //testes
 
-TotalProductsQuantity(objeto);
-DisponibilityProductsQuantity(objeto, false);
-DisponibilityProductsQuantity(objeto, true);
-ListProducts(objeto);
-ListProductsWithDisponibility(objeto, true);
-ListProductsWithDisponibility(objeto, false);
+//console.log(totalProductsQuantity(estoque))
+//console.log(listProducts(estoque));
+//console.log(ProductQuantityWithFilters(estoque, true))
+//console.log(ProductQuantityWithFilters(estoque, false))
+//console.log(listProductsWithFilters(estoque, true))
+//console.log(listProductsWithFilters(estoque, false))
