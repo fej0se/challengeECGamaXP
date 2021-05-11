@@ -11,7 +11,7 @@ const estoque = [
 
         "disponivel": "sim",
 
-        "emDestaque": "nao",
+        "emDestaque": "sim",
 
         "departamento": {
 
@@ -93,9 +93,9 @@ const estoque = [
 
         "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
 
-        "preco": 35000.00,
+        "preco": 5000.00,
 
-        "qtdEstoque": 5,
+        "qtdEstoque": 3,
 
         "disponivel": "sim",
 
@@ -135,69 +135,68 @@ const estoque = [
 ]
 
 //Retorna produto de maior valor
-function MaxValue(products) {
+function maxValue(products) {
     const max = products.reduce((prodX, prodY) => {
         if (prodX.preco > prodY.preco) {
-            return prodX
+            return prodX;
         } else {
-            return prodY
+            return prodY;
         }
-
-
-    })
-    console.log(`Produto de maior valor: ${max.descricao} | valor: R$ ${(max.preco).toFixed(2)}, e pertence ao departamento: ${max.departamento.nomeDepto}`)
+    });
+    return {produto: max.descricao, departamento: max.departamento.nomeDepto}
 }
 
 //Retorna produto de menor valor
-function MinValue(products) {
+function minValue(products) {
     const min = products.reduce((prodX, prodY) => {
         if (prodX.preco < prodY.preco) {
-            return prodX
+            return prodX;
         } else {
-            return prodY
+            return prodY;
         }
-
-
     })
-    console.log(`Produto de menor valor: ${min.descricao} | valor: R$ ${(min.preco).toFixed(2)}, e pertence ao departamento: ${min.departamento.nomeDepto}`)
+    return {produto: min.descricao, departamento: min.departamento.nomeDepto}
 }
 
 //Quantidade de produtos em destaque
-function FeaturedProducts(products) {
+function featuredProducts(products) {
     let quant = 0;
     for (product of products) {
         if (product.emDestaque == "sim") {
             quant++;
         }
     }
-    console.log(`Quantidade de produtos em destaque ${quant}`);
+    return quant;
 }
 
-//Retorna lista de proutos em destaque
-function ListFeaturedProducts(products) {
-    console.log("Listando produtos em destaque:")
+//Retorna proutos em destaque
+function listFeaturedProducts(products) {
+    let newList = [];
     for (product of products) {
         if (product.emDestaque == "sim") {
-            console.log(`Código: ${product.codProduto} | Produto: ${product.descricao} | Quantidade: ${product.qtdEstoque} | Preço: ${product.preco}`);
+            newList.push(product)
         }
     }
+    return newList;
 }
 
-//Retorna ticket médio dos produtos em destaque
-function TicketFeaturedProducts(products) {
+//Retorna ticket médio dos produtos em destaque disponiveis
+function ticketFeaturedProducts(products) {
     let sum = 0
-    let quant = 0
+    let quantItem = 0
     for (product of products) {
         if (product.emDestaque == "sim"){
-            quant++
-            sum += product.preco
+            sum += (product.preco * product.qtdEstoque)
+            quantItem += product.qtdEstoque
         }
     }
-    console.log(`Ticket médio dos produtos em destaque: R$ ${(sum / quant).toFixed(2)}`)
+    return (sum / quantItem).toFixed(2);
 }
 
-MaxValue(objeto)
-MinValue(objeto)
-FeaturedProducts(objeto)
-ListFeaturedProducts(objeto)
-TicketFeaturedProducts(objeto)
+//testes
+
+//console.log(maxValue(estoque));
+//console.log(minValue(estoque));
+//console.log(featuredProducts(estoque));
+//console.log(listFeaturedProducts(estoque));
+//console.log(ticketFeaturedProducts(estoque))
