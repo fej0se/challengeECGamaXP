@@ -89,7 +89,7 @@
 | Tarefa                                                | Estimativa | Início     | Término    |       Status       |
 | ----------------------------------------------------- | :--------: | ---------- | -------------- | :----------: |
 | Quantidade total de produtos por departamento          | 45m    | 12/05/2021 | 12/05/2021 |       :white_check_mark: |
-| Listar quantidade total de produtos de um departamento.  | 50m    | 12/05/2021 | 12/05/2021 |       :white_check_mark: |
+| Listar produtos de um departamento.  | 50m    | 12/05/2021 | 12/05/2021 |       :white_check_mark: |
 | Levantar inventário de um departamento.               | 25m       | 12/05/2021 | 12/05/2021 |       :white_check_mark: |
 | Ticket médio do total de produtos de um departamento. | 20m        | 12/05/2021 | 12/05/2021 |       :white_check_mark: |
 | Descobrir departamento mais valioso.                  | 20m        | 13/05/2021 | 13/05/2021 |       :white_check_mark: |
