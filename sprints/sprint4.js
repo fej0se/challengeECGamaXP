@@ -1,138 +1,4 @@
-//estoque teste
-const objeto = [
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 3500.00,
-
-        "qtdEstoque": 5,
-
-        "disponivel": "sim",
-
-        "emDestaque": "nao",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "acessórios"
-
-        }
-
-    },
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 4500.00,
-
-        "qtdEstoque": 2,
-
-        "disponivel": "sim",
-
-        "emDestaque": "sim",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "acessórios"
-
-        }
-
-    },
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 3500.00,
-
-        "qtdEstoque": 5,
-
-        "disponivel": "sim",
-
-        "emDestaque": "nao",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "test"
-
-        }
-
-    },
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 4500.00,
-
-        "qtdEstoque": 0,
-
-        "disponivel": "nao",
-
-        "emDestaque": "nao",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "Informatica e acessórios"
-
-        }
-
-    },
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 1000.00,
-
-        "qtdEstoque": 5,
-
-        "disponivel": "sim",
-
-        "emDestaque": "sim",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "Informatica e acessórios"
-
-        }
-
-    },
-    {
-        "codProduto": 1234,
-
-        "descricao": "Computador Dell Inspiron XS 12000 16Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
-
-        "preco": 1500.00,
-
-        "qtdEstoque": 0,
-
-        "disponivel": "nao",
-
-        "emDestaque": "sim",
-
-        "departamento": {
-
-            "idDepto": 987,
-
-            "nomeDepto": "acessórios"
-
-        }
-
-    },
-]
+const listaProdutos = require('../listaProdutos');
 
 //retorna quantidade de produtos cadastrados nos departamentos
 function totalQtdByDepartament(products) {
@@ -140,9 +6,9 @@ function totalQtdByDepartament(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ departamento: products[i].departamento.nomeDepto, total: 1 })
+            deptos.push({ departamento: products[i].departamento.nomeDepto, total: products[i].qtdEstoque })
         } else {
-            deptos[index].total++
+            deptos[index].total += products[i].qtdEstoque
         }
     }
     return deptos
@@ -167,7 +33,7 @@ function departamentPatrimony(products, departament) {
             total += product.preco * product.qtdEstoque
         }
     }
-    return total.toFixed(2)
+    return total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 
 //retorna departamentos e o ticket médio de cada um
@@ -183,7 +49,7 @@ function departamentTicket(products) {
         }
     }
     for(depto of deptos) {
-        depto.ticket = (depto.total / depto.quant).toFixed(2)
+        depto.ticket = (depto.total / depto.quant).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
         delete depto.total;
         delete depto.quant
     }
@@ -239,10 +105,10 @@ function maxOrMinProductValueOfAnDepartament(products, departament, maxOrMin) {
 
 //testes
 
-//console.log(totalQtdByDepartament(objeto))
-//console.log(listProductsByDepartament(objeto, 'test'))
-//console.log(departamentPatrimony(objeto, 'acessórios'))
-//console.log(departamentTicket(objeto, 'acessórios'))
-//console.log(mostValuedDepartament(objeto))
-//console.log(maxOrMinProductValueOfAnDepartament(objeto, 'acessórios', 'max'))
-//console.log(maxOrMinProductValueOfAnDepartament(objeto, 'Informatica e acessórios', 'min'))
+//console.log(totalQtdByDepartament(listaProdutos))
+//console.log(listProductsByDepartament(listaProdutos, 'Adaptadores'))
+//console.log(departamentPatrimony(listaProdutos, 'Games'))
+//console.log(departamentTicket(listaProdutos))
+//console.log(mostValuedDepartament(listaProdutos))
+//console.log(maxOrMinProductValueOfAnDepartament(listaProdutos, 'Games', 'max'))
+//console.log(maxOrMinProductValueOfAnDepartament(listaProdutos, 'Informatica', 'min'))
