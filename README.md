@@ -46,7 +46,7 @@
 <br>
 
  ##### Estimativa: 2 dias
- ##### Status da Sprint: Pendente
+ ##### Status da Sprint: Done :heavy_check_mark:
 
 
 | Tarefa                                                   | Estimativa | Início     | Término    | Status       |
@@ -66,7 +66,7 @@
 <br>
 
  ##### Estimativa: 1 dia
- ##### Status da Sprint: Pendente
+ ##### Status da Sprint: Done :heavy_check_mark:
 
 
 | Tarefa                                                  | Estimativa | Início     | Término    |       Status       |
@@ -83,7 +83,7 @@
 <br>
 
  ##### Estimativa: 2 dias
- ##### Status da Sprint: Pendente
+ ##### Status da Sprint: Done :heavy_check_mark:
 
 
 | Tarefa                                                | Estimativa | Início     | Término    |       Status       |
