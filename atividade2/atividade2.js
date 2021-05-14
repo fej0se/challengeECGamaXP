@@ -1150,7 +1150,7 @@ function totalProductsByDepartament(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(val => val.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ departamento: products[i].departamento.nomeDepto, total: products[i].qtdEstoque })
+            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, total: products[i].qtdEstoque })
         } else {
             deptos[index].total += products[i].qtdEstoque
         }
@@ -1166,7 +1166,7 @@ function departamentInventory(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque)})
+            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque)})
         } else {
             deptos[index].inventario += (products[i].preco * products[i].qtdEstoque)
         }
@@ -1201,7 +1201,7 @@ function departamentTicket(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ departamento: products[i].departamento.nomeDepto, valueTotal: (products[i].preco * products[i].qtdEstoque), quantTotal: products[i].qtdEstoque})
+            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, valueTotal: (products[i].preco * products[i].qtdEstoque), quantTotal: products[i].qtdEstoque})
         } else {
             deptos[index].valueTotal += (products[i].preco * products[i].qtdEstoque)
             deptos[index].quantTotal += products[i].qtdEstoque
