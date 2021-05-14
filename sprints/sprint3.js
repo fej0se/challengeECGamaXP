@@ -1,4 +1,4 @@
-const listaProdutos = require('../listaProdutos');
+const listaProdutos = require('./listaProdutos');
 
 //Retorna o valor do patrimonio da empresa
 function getPatrimony(products){

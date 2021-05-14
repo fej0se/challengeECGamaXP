@@ -1,4 +1,4 @@
-const listaProdutos = require('../listaProdutos');
+const listaProdutos = require('./listaProdutos');
 
 //retorna quantidade de produtos cadastrados nos departamentos
 function totalQtdByDepartament(products) {

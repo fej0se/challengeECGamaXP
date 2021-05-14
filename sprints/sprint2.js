@@ -1,4 +1,4 @@
-const listaProdutos = require('../listaProdutos');
+const listaProdutos = require('./listaProdutos');
 
 //Retorna produto de maior valor
 function maxValue(products) {

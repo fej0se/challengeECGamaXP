@@ -1,4 +1,4 @@
-const listaProdutos = require('../listaProdutos');
+const listaProdutos = require('./listaProdutos');
 
 //Retorna soma dos itens de cada produto cadastrados em estoque
 function totalProductsQuantity(products) {
