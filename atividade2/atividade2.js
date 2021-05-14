@@ -1220,6 +1220,7 @@ departamentTicket(listaProdutos);
 //Departamento mais valioso (qual o departamento que tem a maior somatória dos valores dos itens)
 function mostValuableDepartament(products) {
     let deptos = [];
+    let deptoMost = {}
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
@@ -1228,17 +1229,17 @@ function mostValuableDepartament(products) {
             deptos[index].inventario += (products[i].preco * products[i].qtdEstoque)
         }
     }
-    for (depto of deptos) {
-        depto.inventario = depto.inventario.toFixed(2);
-
-    }
-
-    const mostValued = Math.max(...deptos.map(({ inventario }) => inventario))
-    for (depto of deptos) {
-        if (depto.inventario == mostValued) {
-            console.log(`Departamento mais valioso: ${depto.departamento}`)
+ 
+    for(depto of deptos){
+        if(!deptoMost.inventario){
+            deptoMost = depto;
+        }
+        if(depto.inventario > deptoMost.inventario){
+            deptoMost = depto
         }
     }
+
+    console.log(`Departamento mais valioso: ${deptoMost.departamento}, com inventário de ${(deptoMost.inventario).toLocaleString('en-us', { style: 'currency', currency: 'USD' })} `)
 }
 
 mostValuableDepartament(listaProdutos);
