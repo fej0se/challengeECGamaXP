@@ -1088,7 +1088,7 @@ const listaProdutos = [
         "emDestaque": "nao",
         "departamento": {
             "idDepto": 9,
-            "nomeDepto": "Informatica"        
+            "nomeDepto": "Informatica"
         }
     }
 ]
@@ -1132,14 +1132,14 @@ function totalAvailableProducts(products) {
 totalAvailableProducts(listaProdutos);
 
 //Valor total do inventário da empresa (somatória dos valores individuais multiplicado pela quantidade em estoque)
-function companyInventory(products){
+function companyInventory(products) {
     let total = 0
     products.forEach((product) => {
-        if (product.disponivel == 'sim'){
-        total += (product.preco * product.qtdEstoque)
+        if (product.disponivel == 'sim') {
+            total += (product.preco * product.qtdEstoque)
         }
     })
-    console.log(`total do inventário: ${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`) 
+    console.log(`total do inventário: ${total.toLocaleString('en-us', { style: 'currency', currency: 'USD' })}`)
 }
 
 companyInventory(listaProdutos);
@@ -1166,13 +1166,13 @@ function departamentInventory(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque)})
+            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque) })
         } else {
             deptos[index].inventario += (products[i].preco * products[i].qtdEstoque)
         }
     }
-    for(depto of deptos) {
-        depto.inventario = depto.inventario.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    for (depto of deptos) {
+        depto.inventario = depto.inventario.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 
     }
     console.log(deptos);
@@ -1181,16 +1181,16 @@ function departamentInventory(products) {
 departamentInventory(listaProdutos);
 
 //Valor do ticket médio dos produtos da empresa (basicamente o valor total do inventário dividido pelo número de itens)
-function ticket(products){
+function ticket(products) {
     let sum = 0
     let quantItem = 0
     for (product of products) {
-        if (product.disponivel == "sim"){
+        if (product.disponivel == "sim") {
             sum += (product.preco * product.qtdEstoque)
             quantItem += product.qtdEstoque
         }
     }
-    console.log(`ticket médio: ${(sum / quantItem).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`);
+    console.log(`ticket médio: ${(sum / quantItem).toLocaleString('en-us', { style: 'currency', currency: 'USD' })}`);
 }
 
 ticket(listaProdutos)
@@ -1201,14 +1201,14 @@ function departamentTicket(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, valueTotal: (products[i].preco * products[i].qtdEstoque), quantTotal: products[i].qtdEstoque})
+            deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, valueTotal: (products[i].preco * products[i].qtdEstoque), quantTotal: products[i].qtdEstoque })
         } else {
             deptos[index].valueTotal += (products[i].preco * products[i].qtdEstoque)
             deptos[index].quantTotal += products[i].qtdEstoque
         }
     }
-    for(depto of deptos) {
-        depto.ticket = (depto.valueTotal / depto.quantTotal).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    for (depto of deptos) {
+        depto.ticket = (depto.valueTotal / depto.quantTotal).toLocaleString('en-us', { style: 'currency', currency: 'USD' });
         delete depto.valueTotal;
         delete depto.quantTotal
     }
@@ -1223,12 +1223,12 @@ function mostValuableDepartament(products) {
     for (let i = 0; i < products.length; i++) {
         let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
-            deptos.push({ departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque)})
+            deptos.push({ departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque) })
         } else {
             deptos[index].inventario += (products[i].preco * products[i].qtdEstoque)
         }
     }
-    for(depto of deptos) {
+    for (depto of deptos) {
         depto.inventario = depto.inventario.toFixed(2);
 
     }
@@ -1245,28 +1245,33 @@ mostValuableDepartament(listaProdutos);
 
 //Produto mais caro da loja (bem como seu departamento)
 function highestValuedProduct(products) {
-    const max = products.reduce((prodX, prodY) => {
-        if (prodX.preco > prodY.preco) {
-            return prodX;
-        } else {
-            return prodY;
+    let max = {
+        "preco": 0
+    };
+    for(product of products){
+        if(product.preco > max.preco){
+            max = product
         }
-    });
-    console.log(`Produto mais caro da loja: ${max.descricao}, departamento: ${max.departamento.nomeDepto}`);
+    }
+
+    console.log(`Produto mais caro da loja: ${max.descricao}, departamento: ${max.departamento.nomeDepto}, preco: ${(max.preco).toLocaleString('en-us', { style: 'currency', currency: 'USD' })}`);
 }
 
 highestValuedProduct(listaProdutos);
 
 //Produto mais barato da loja (bem como seu departamento)
 function lowestValuedProduct(products) {
-    const min = products.reduce((prodX, prodY) => {
-        if (prodX.preco < prodY.preco) {
-            return prodX;
-        } else {
-            return prodY;
+    let min = {
+        "preco": 10000
+    };
+    for(product of products){
+        if (product.preco < min.preco){
+            min = product
         }
-    })
-    console.log(`Produto mais barato da loja: ${min.descricao}, departamento: ${min.departamento.nomeDepto}`);
+    }
+    console.log(`Produto mais barato da loja: ${min.descricao}, departamento: ${min.departamento.nomeDepto}, preco: ${(min.preco).toLocaleString('en-us', { style: 'currency', currency: 'USD' })}`);
 }
 
 lowestValuedProduct(listaProdutos);
+
+
