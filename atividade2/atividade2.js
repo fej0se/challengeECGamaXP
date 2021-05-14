@@ -1169,7 +1169,9 @@ function totalProductsByDepartament(products) {
             deptos[index].total += products[i].qtdEstoque
         }
     }
-    console.log(deptos);
+    for(depto of deptos){
+        console.log(depto)
+    }
 }
 
 totalProductsByDepartament(listaProdutos)
@@ -1201,9 +1203,9 @@ function departamentInventory(products) {
     }
     for (depto of deptos) {
         depto.inventario = depto.inventario.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
+        console.log(depto)
 
     }
-    console.log(deptos);
 }
 
 departamentInventory(listaProdutos);
@@ -1253,8 +1255,9 @@ function departamentTicket(products) {
         depto.ticket = (depto.valueTotal / depto.quantTotal).toLocaleString('en-us', { style: 'currency', currency: 'USD' });
         delete depto.valueTotal;
         delete depto.quantTotal
+        console.log(depto)
     }
-    console.log(deptos);
+    
 }
 
 departamentTicket(listaProdutos);
