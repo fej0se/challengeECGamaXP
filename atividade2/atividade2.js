@@ -1245,10 +1245,11 @@ mostValuableDepartament(listaProdutos);
 
 //Produto mais caro da loja (bem como seu departamento)
 function highestValuedProduct(products) {
-    let max = {
-        "preco": 0
-    };
+    let max = {};
     for(product of products){
+        if(!max.preco){
+            max = product;
+        }
         if(product.preco > max.preco){
             max = product
         }
@@ -1261,10 +1262,11 @@ highestValuedProduct(listaProdutos);
 
 //Produto mais barato da loja (bem como seu departamento)
 function lowestValuedProduct(products) {
-    let min = {
-        "preco": 10000
-    };
+    let min = {};
     for(product of products){
+        if(!min.preco){
+            min = product;
+        }
         if (product.preco < min.preco){
             min = product
         }
