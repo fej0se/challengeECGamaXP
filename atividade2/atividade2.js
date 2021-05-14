@@ -1148,7 +1148,21 @@ companyInventory(listaProdutos);
 function totalProductsByDepartament(products) {
     let deptos = [];
     for (let i = 0; i < products.length; i++) {
-        let index = deptos.findIndex(val => val.departamento == products[i].departamento.nomeDepto)
+                //trem dificil, tive que entender como o jeito fácil (usando findIndex()) funcionava
+                let index = 0
+                if (deptos.length == 0) {
+                    index = -1;
+                } else {
+                    for (let y = 0; y < deptos.length; y++) {
+                        if (deptos[y].departamento == products[i].departamento.nomeDepto) {
+                            index = y;
+                            break
+                        } else {
+                            index = -1;
+                        }
+                    }
+                }
+                //jeito fácil let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
             deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, total: products[i].qtdEstoque })
         } else {
@@ -1164,7 +1178,21 @@ totalProductsByDepartament(listaProdutos)
 function departamentInventory(products) {
     let deptos = [];
     for (let i = 0; i < products.length; i++) {
-        let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
+                //trem dificil, tive que entender como o jeito fácil (usando findIndex()) funcionava
+                let index = 0
+                if (deptos.length == 0) {
+                    index = -1;
+                } else {
+                    for (let y = 0; y < deptos.length; y++) {
+                        if (deptos[y].departamento == products[i].departamento.nomeDepto) {
+                            index = y;
+                            break
+                        } else {
+                            index = -1;
+                        }
+                    }
+                }
+                //jeito fácil let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
             deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque) })
         } else {
@@ -1199,7 +1227,21 @@ ticket(listaProdutos)
 function departamentTicket(products) {
     let deptos = [];
     for (let i = 0; i < products.length; i++) {
-        let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
+                //trem dificil, tive que entender como o jeito fácil (usando findIndex()) funcionava
+                let index = 0
+                if (deptos.length == 0) {
+                    index = -1;
+                } else {
+                    for (let y = 0; y < deptos.length; y++) {
+                        if (deptos[y].departamento == products[i].departamento.nomeDepto) {
+                            index = y;
+                            break
+                        } else {
+                            index = -1;
+                        }
+                    }
+                }
+                //jeito fácil let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
             deptos.push({ id: products[i].departamento.idDepto, departamento: products[i].departamento.nomeDepto, valueTotal: (products[i].preco * products[i].qtdEstoque), quantTotal: products[i].qtdEstoque })
         } else {
@@ -1222,19 +1264,33 @@ function mostValuableDepartament(products) {
     let deptos = [];
     let deptoMost = {}
     for (let i = 0; i < products.length; i++) {
-        let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
+        //trem dificil, tive que entender como o jeito fácil (usando findIndex()) funcionava
+        let index = 0
+        if (deptos.length == 0) {
+            index = -1;
+        } else {
+            for (let y = 0; y < deptos.length; y++) {
+                if (deptos[y].departamento == products[i].departamento.nomeDepto) {
+                    index = y;
+                    break
+                } else {
+                    index = -1;
+                }
+            }
+        }
+        //jeito fácil let index = deptos.findIndex(array => array.departamento == products[i].departamento.nomeDepto)
         if (index < 0) {
             deptos.push({ departamento: products[i].departamento.nomeDepto, inventario: (products[i].preco * products[i].qtdEstoque) })
         } else {
             deptos[index].inventario += (products[i].preco * products[i].qtdEstoque)
         }
     }
- 
-    for(depto of deptos){
-        if(!deptoMost.inventario){
+
+    for (depto of deptos) {
+        if (!deptoMost.inventario) {
             deptoMost = depto;
         }
-        if(depto.inventario > deptoMost.inventario){
+        if (depto.inventario > deptoMost.inventario) {
             deptoMost = depto
         }
     }
@@ -1247,11 +1303,11 @@ mostValuableDepartament(listaProdutos);
 //Produto mais caro da loja (bem como seu departamento)
 function highestValuedProduct(products) {
     let max = {};
-    for(product of products){
-        if(!max.preco){
+    for (product of products) {
+        if (!max.preco) {
             max = product;
         }
-        if(product.preco > max.preco){
+        if (product.preco > max.preco) {
             max = product
         }
     }
@@ -1264,11 +1320,11 @@ highestValuedProduct(listaProdutos);
 //Produto mais barato da loja (bem como seu departamento)
 function lowestValuedProduct(products) {
     let min = {};
-    for(product of products){
-        if(!min.preco){
+    for (product of products) {
+        if (!min.preco) {
             min = product;
         }
-        if (product.preco < min.preco){
+        if (product.preco < min.preco) {
             min = product
         }
     }
