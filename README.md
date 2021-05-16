@@ -118,14 +118,14 @@
 
 | Tarefa                                        | Estimativa | Início     | Término    |       Status       |
 | --------------------------------------------- | :--------: | ---------- | ---------- |  :----------: |
-| Configuração do MySQL                         | 1:30h      | 16/05/2021 | 16/05/2021 |       :red_circle: |
-| Modelar dados de produtos e departamentos     | 4:00h      | 16/05/2021 | 17/05/2021 |       :red_circle: |
-| Criar relações entre produtos e departamentos | 2:00h      | 17/05/2021 | 18/05/2021 |       :red_circle: |
-| Modelar dados de clientes                     | 2:50h      | 18/05/2021 | 18/05/2021 |       :red_circle: |
-| Modelar dados de pedidos                      | 3:30h     | 19/05/2021 | 19/05/2021 |       :red_circle: |
-| Criar relações entre clientes e pedidos       | 2:00h      | 19/05/2021 | 19/05/2021 |       :red_circle: |
-| Popular banco                                 | 4:00h      | 19/05/2021 | 20/05/2021 |       :red_circle: |
-| Realizar dumps do banco de dados | 2:00h | 20/05/2021 | 20/05/2021 | :red_circle: |
+| Configuração do MySQL                         | 1:30h      | 16/05/2021 | 16/05/2021 |       :white_check_mark: |
+| Modelar dados de produtos e departamentos     | 4:00h      | 16/05/2021 | 17/05/2021 |       :white_check_mark: |
+| Criar relações entre produtos e departamentos | 2:00h      | 17/05/2021 | 18/05/2021 |       :white_check_mark: |
+| Modelar dados de clientes                     | 2:50h      | 18/05/2021 | 18/05/2021 |       :white_check_mark: |
+| Modelar dados de pedidos                      | 3:30h     | 19/05/2021 | 19/05/2021 |       :white_check_mark: |
+| Criar relações entre clientes e pedidos       | 2:00h      | 19/05/2021 | 19/05/2021 |       :white_check_mark: |
+| Popular banco                                 | 4:00h      | 19/05/2021 | 20/05/2021 |       :white_check_mark: |
+| Realizar dumps do banco de dados | 2:00h | 20/05/2021 | 20/05/2021 | :white_check_mark: |
 
 
 ---
