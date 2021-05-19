@@ -1,5 +1,9 @@
 # Atividade 3 - Banco de dados
 
+Todo o contexto da atividade pode ser encontrada [aqui](./context.md).
+
+<br>
+
 ### Como utilizar!
 
   * clone esse repositório.
