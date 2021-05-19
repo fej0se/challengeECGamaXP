@@ -1110,7 +1110,7 @@ function totalFeaturedProducts(products) {
     let quant = 0;
     for (product of products) {
         if (product.emDestaque == "sim") {
-            quant += product.qtdEstoque;
+            quant++;
         }
     }
     console.log(`total de produtos em destaque: ${quant}`);
@@ -1123,7 +1123,7 @@ function totalAvailableProducts(products) {
     let quant = 0;
     for (product of products) {
         if (product.disponivel == 'sim') {
-            quant += product.qtdEstoque
+            quant++;
         }
     }
     console.log(`total de produtos disponíveis: ${quant}`);
