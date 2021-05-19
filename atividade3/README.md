@@ -1,18 +1,22 @@
 # Atividade 3 - Banco de dados
 
-#### How to Use!
+#### Como utilizar!
 
   * clone esse repositório.
 
 Passos:
 </br>
 
-  1. importar as tabelas ao mysql, usando o arquivo (criacaotabelas.sql)
-  2. importar todas as inserções das tabelas, usando o arquivo (insercoes.sql)
-  3. realizar as consultas, todas estão em um único arquivo (consultas.sql)
+  1. importar as tabelas ao mysql, usando o arquivo ([criacaotabelas.sql](./criacaotabelas.sql))
+  2. importar todas as inserções das tabelas, usando o arquivo ([insercoes.sql](./insercoes.sql))
+  3. realizar as consultas, todas estão em um único arquivo ([consultas.sql](./consultas.sql))
 ---
   ## Modelo
-  ![img modelo](./modelo2.png)
+  ![img modelo](./modeloer.png)
+
+  Versão [PDF](./modeloer.pdf)
+  Arquivo [Workbench](./gama.mwb)
+  
 ---
   ## Consultas:
 
