@@ -1,6 +1,6 @@
 # Atividade 3 - Banco de dados
 
-Todo o contexto da atividade pode ser encontrada [aqui](./context.md).
+Todo o contexto da atividade pode ser encontrada [aqui](./contexto.md).
 
 <br>
 
