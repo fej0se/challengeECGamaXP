@@ -134,7 +134,7 @@ Passos:
     ```mysql
     +-----------------+-----------+---------------------+-------------------+---------------------------------------------------------------------------------------+----------+
     | Nome da empresa | Cod Depto | Departamento        | Qtd Prod Vendidos | Produto mais caro vendido do departamento                                             | Valor    |
-    +-----------------+-----------+---------------------+-------------------    +---------------------------------------------------------------------------------------    +----------+
+    +-----------------+-----------+---------------------+-------------------    +---------------------------------------------------------------------------------------+----------+
     | GAMA ACADEMY    |         1 | Adaptadores         |                 6 | ADAPTADOR CONVERSOR HDMI / RCA FULLHD 1080 BRANCO                                     | $ 14.00  |
     | GAMA ACADEMY    |         2 | Ferramentas         |                 1 | CADEADO SEGURANCA PARA NOTEBOOK HLD Fu0026K LLAVE                                     | $ 6.50   |
     | GAMA ACADEMY    |         3 | Eletronicos         |                 2 | CAMERA GOPRO HERO 8 CHDHX-801-RW PRETO                                                | $ 340.00 |
@@ -142,8 +142,8 @@ Passos:
     | GAMA ACADEMY    |         6 | Moveis              |                 1 | CADEIRA GAMER MTEK MK02 PRETO/VERMELHO                                                | $ 190.00 |
     | GAMA ACADEMY    |         7 | Tablets e Celulares |                 3 | TABLET AMAZON FIRE 7 1GB/16GB PRETO WIFI/QUAD CORE 7                                  | $ 204.50 |
     | GAMA ACADEMY    |         8 | Games               |                17 | GAME CONTROLE REDRAGON HARROW G808 VIBRATION PC/PS3                                   | $ 418.00 |
-    | GAMA ACADEMY    |         9 | Informatica         |                23 | DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB... | $ 750.00 |
-    +-----------------+-----------+---------------------+-------------------    +---------------------------------------------------------------------------------------    +----------+
+    | GAMA ACADEMY    |         9 | Informatica         |                23 | DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO | $ 750.00 |
+    +-----------------+-----------+---------------------+-------------------    +---------------------------------------------------------------------------------------+----------+
     8 rows in set, 1 warning (0,15 sec)
     `````
 * BONUS: 1 consulta contemplando a junção entre 2 tabelas + uma operação
