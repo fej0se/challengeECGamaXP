@@ -98,18 +98,18 @@ Passos:
     +--------+----------------------+----------------------+--------------------+----------------+
     | PEDIDO | DATA                 | STATUS               | CLIENTE            | CEP da entrega |
     +--------+----------------------+----------------------+--------------------+----------------+
-    |   1025 | 12, May de 2021      | Aguardando Pagamento | Antonio C da Silva | 81.770-777     |
-    |   6254 | 15, May de 2021      | Pagamento autorizado | Felipe José        | 13.273-269     |
-    |   6528 | 1, February de 2021  | Entregue             | João da Silva      | 13.273-358     |
-    |   6589 | 14, August de 2020   | Entregue             | José da Silva      | 13.273-269     |
-    |   7896 | 1, March de 2021     | Novo pedido          | Maria da Silva     | 81.770-777     |
-    |   8963 | 5, January de 2020   | Pagamento negado     | Safira Mendes      | 13.273-358     |
-    |   9624 | 15, May de 2021      | Aguardando pagamento | Felipe José        | 81.070-001     |
-    |   9632 | 10, May de 2021      | Em Separação         | Antonio C da Silva | 81.770-777     |
-    |   9658 | 20, December de 2020 | Cancelado            | José da Silva      | 13.273-269     |
-    |   9984 | 1, February de 2021  | Entregue             | Francisco Sousa    | 81.070-001     |
+    |   1025 | 12, maio de 2021     | Aguardando Pagamento | Antonio C da Silva | 81.770-777     |
+    |   6254 | 15, maio de 2021     | Pagamento autorizado | Felipe José        | 13.273-269     |
+    |   6528 | 1, fevereiro de 2021 | Entregue             | João da Silva      | 13.273-358     |
+    |   6589 | 14, agosto de 2020   | Entregue             | José da Silva      | 13.273-269     |
+    |   7896 | 1, março de 2021     | Novo pedido          | Maria da Silva     | 81.770-777     |
+    |   8963 | 5, janeiro de 2020   | Pagamento negado     | Safira Mendes      | 13.273-358     |
+    |   9624 | 15, maio de 2021     | Aguardando pagamento | Felipe José        | 81.070-001     |
+    |   9632 | 10, maio de 2021     | Em Separação         | Antonio C da Silva | 81.770-777     |
+    |   9658 | 20, dezembro de 2020 | Cancelado            | José da Silva      | 13.273-269     |
+    |   9984 | 1, fevereiro de 2021 | Entregue             | Francisco Sousa    | 81.070-001     |
     +--------+----------------------+----------------------+--------------------+----------------+
-    10 rows in set (0,01 sec)
+    10 rows in set (0,00 sec)
     `````
 * 1 consulta contemplando a junção entre 2 tabelas + uma operação de totalização e agrupamento
   <br>
