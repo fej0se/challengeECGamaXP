@@ -29,6 +29,7 @@ Passos:
 
 * 1 consulta contemplando contagem ou totalização
   <br>
+    
     **situação-problema**: Quero poder saber a quantidade total de produtos em estoque.
     <br>
     
@@ -47,6 +48,7 @@ Passos:
     `````
 * 1 consulta contemplando a junção entre 2 tabelas
   <br>
+  
   **situação-problema**: Quero poder saber quais são meus clientes cadastrados e listar além de email e whatsapp todos os seus respectivos endereços (somente CEP).
   <br>
   Código da consulta: 
@@ -74,6 +76,7 @@ Passos:
   `````
 * 1 consulta contemplando a junção entre 3 tabelas
   <br>
+    
     **situação-problema**: Quero poder saber todos os pedidos já realizados junto de: sua data, status, nome do cliente e CEP de entrega.
     <br>
     
@@ -102,6 +105,7 @@ Passos:
     `````
 * 1 consulta contemplando a junção entre 2 tabelas + uma operação de totalização e agrupamento
   <br>
+    
     **situação-problema**: Quero poder saber qual valor total gasto pelo cliente em minha loja.
     <br>
     
@@ -126,6 +130,7 @@ Passos:
     `````
 * 1 consulta contemplando a junção entre 3 ou mais tabelas + uma operação de totalização e agrupamento
   <br>
+    
     **situação-problema**: Quero poder consultar em um unico retorno, o nome da empresa, os departamentos, a quantidade de produtos ja vendidos por cada um junto do produto de maior valor ja vendido e seu preço.
     <br>
     
@@ -152,6 +157,7 @@ Passos:
     `````
 * BONUS: 1 consulta contemplando a junção entre 2 tabelas + uma operação
   <br>
+    
     **situação-problema**: Quero saber o valor do inventário de cada departamento.
     <br>
     
