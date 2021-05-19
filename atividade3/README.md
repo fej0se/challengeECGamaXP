@@ -38,7 +38,7 @@ Passos:
   
     Retorno:
 
-    ```mysql
+    ```console
     +-----------------------------------+
     | Quantidade de produtos em estoque |
     +-----------------------------------+
@@ -55,7 +55,7 @@ Passos:
   > SELECT c.idCliente AS ID, c.nomeCliente AS "NOME CLIENTE", c.email AS "E-MAIL", CONCAT(SUBSTRING(c.whatsapp,1,2),' ',SUBSTRING(c.whatsapp,4,4),'-',SUBSTRING(c.whatsapp,8,4)) AS WHATSAPP, CONCAT(SUBSTRING(e.cep,1,2),'.',SUBSTRING(e.cep,3,3),'-',SUBSTRING(e.cep,6,3)) AS CEP FROM clientes_enderecos AS ce INNER JOIN clientes AS c ON c.idCliente = ce.cliente INNER JOIN  enderecos AS e ON e.id = ce.endereco;
 
   Retorno: 
-  ```mysql
+  ```console
   +----+--------------------+---------------------+--------------+------------+
   | ID | NOME CLIENTE       | E-MAIL              | WHATSAPP     | CEP        |
   +----+--------------------+---------------------+--------------+------------+
@@ -86,7 +86,7 @@ Passos:
   
     Retorno:
 
-    ```mysql
+    ```console
     +--------+----------------------+----------------------+--------------------+----------------+
     | PEDIDO | DATA                 | STATUS               | CLIENTE            | CEP da entrega |
     +--------+----------------------+----------------------+--------------------+----------------+
@@ -114,7 +114,7 @@ Passos:
   
     Retorno:
 
-    ```mysql
+    ```console
     +----+--------------------+------------------+
     | ID | NOME               | Total em compras |
     +----+--------------------+------------------+
@@ -140,7 +140,7 @@ Passos:
   
     Retorno:
 
-    ```mysql
+    ```console
     +-----------------+-----------+---------------------+-------------------+---------------------------------------------------------------------------------------+----------+
     | Nome da empresa | Cod Depto | Departamento        | Qtd Prod Vendidos | Produto mais caro vendido do departamento                                             | Valor    |
     +-----------------+-----------+---------------------+-------------------+---------------------------------------------------------------------------------------+----------+
@@ -167,7 +167,7 @@ Passos:
   
     Retorno:
 
-    ```mysql
+    ```console
     +----+---------------------+-------------+
     | id | Departamento        | Inventário  |
     +----+---------------------+-------------+
