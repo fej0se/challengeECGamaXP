@@ -1,6 +1,6 @@
 # Atividade 3 - Banco de dados
 
-#### Como utilizar!
+### Como utilizar!
 
   * clone esse repositório.
 
