@@ -112,7 +112,7 @@
 <br>
 
  ##### Estimativa:  5 dias
- ##### Status da Sprint: Pendente
+ ##### Status da Sprint: Done :heavy_check_mark:
 
 
 
