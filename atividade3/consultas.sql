@@ -10,7 +10,7 @@ FROM produtos;
 
 -- 1 consulta contemplando a junção entre 2 tabelas 
 
--- situação-problema: Quero poder visualizar todos os produtos com estoque maior que 10 e seu departamento.
+-- situação-problema: Quero poder visualizar todos os produtos com quantidade em estoque maior que 10 e seu departamento.
 
 SELECT p.codProduto AS COD, p.descricao AS NOME, p.preco AS PRECO, p.qtdProduto AS QUANT, d.nomeDepto AS 'NOME DPTO' 
 FROM produtos AS p
