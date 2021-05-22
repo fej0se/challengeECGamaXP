@@ -252,9 +252,9 @@ CREATE TABLE `pedidos` (
   `cliente` int NOT NULL,
   `enderecoEntrega` int NOT NULL,
   PRIMARY KEY (`numeroPedido`),
-  KEY `cliente_idx` (`cliente`),
   KEY `enderecoEntrega_idx` (`enderecoEntrega`),
-  CONSTRAINT `cliente` FOREIGN KEY (`cliente`) REFERENCES `clientes_enderecos` (`cliente`),
+  KEY `cliente_idx` (`cliente`),
+  CONSTRAINT `cliente` FOREIGN KEY (`cliente`) REFERENCES `clientes` (`idCliente`),
   CONSTRAINT `enderecoEntrega` FOREIGN KEY (`enderecoEntrega`) REFERENCES `clientes_enderecos` (`endereco`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -339,4 +339,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-19 21:10:29
+-- Dump completed on 2021-05-22 17:35:33
