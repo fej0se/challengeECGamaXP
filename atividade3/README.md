@@ -52,7 +52,6 @@ Passos:
     +-----------------------------------+
     |                              2568 |
     +-----------------------------------+
-    1 row in set (0,20 sec)
     `````
 
 * 1 consulta contemplando a junção entre 2 tabelas
@@ -112,7 +111,6 @@ Passos:
     | 27642 | MONIT. LED 15.6 HYE HY16WLNC HD/VGA/HDMI PRETO                                      |    68 |    12 | Informatica         |
     | 27707 | FONE C/ MICROFONE JBL C50HI PRETO                                                   |     7 |    29 | Informatica         |
     +-------+-------------------------------------------------------------------------------------+-------+-------+---------------------+
-    41 rows in set (0,01 sec)
     ``````
 
 * 1 consulta contemplando a junção entre 3 tabelas
@@ -142,7 +140,6 @@ Passos:
     |   9658 | 20, dezembro de 2020 | Cancelado            | José da Silva      | 13.273-269     |
     |   9984 | 1, fevereiro de 2021 | Entregue             | Francisco Sousa    | 81.070-001     |
     +--------+----------------------+----------------------+--------------------+----------------+
-    10 rows in set (0,00 sec)
     `````
 * 1 consulta contemplando a junção entre 2 tabelas + uma operação de totalização e agrupamento
   <br>
@@ -167,7 +164,6 @@ Passos:
     |  6 | Safira Mendes      | $ 149.00         |
     |  3 | Francisco Sousa    | $ 25.00          |
     +----+--------------------+------------------+
-    7 rows in set (0,16 sec)
     `````
 * 1 consulta contemplando a junção entre 3 ou mais tabelas + uma operação de totalização e agrupamento
   <br>
@@ -194,7 +190,6 @@ Passos:
     | GAMA ACADEMY    |         8 | Games               |                17 | GAME CONTROLE REDRAGON HARROW G808 VIBRATION PC/PS3                                   | $ 418.00 |
     | GAMA ACADEMY    |         9 | Informatica         |                23 | DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO | $ 750.00 |
     +-----------------+-----------+---------------------+-------------------+---------------------------------------------------------------------------------------+----------+
-    8 rows in set, 1 warning (0,15 sec)
     `````
 * BONUS: 1 consulta contemplando a junção entre 2 tabelas + uma operação
   <br>
@@ -222,7 +217,6 @@ Passos:
     |  8 | Games               | $ 55,908.0  |
     |  9 | Informatica         | $ 5,218.6   |
     +----+---------------------+-------------+
-    9 rows in set, 1 warning (0,00 sec)
     `````
 * BONUS: 1 consulta contemplando a junção entre 3 tabelas
   <br>
@@ -250,5 +244,4 @@ Passos:
   |  8 | Antonio C da Silva | antonio@gmail.com   | 11 9999-9999 | 81.770-777 |
   |  8 | Antonio C da Silva | antonio@gmail.com   | 11 9999-9999 | 81.770-777 |
   +----+--------------------+---------------------+-------------- +------------+
-  12 rows in set (0,04 sec)
   `````
